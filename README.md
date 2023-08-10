@@ -1,2 +1,2 @@
-# android-compose-uvg
-Code for the Class of 2023 Android
+# Curso de Android UVG 2023
+- Compose State
