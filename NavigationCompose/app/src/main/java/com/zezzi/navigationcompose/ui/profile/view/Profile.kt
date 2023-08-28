@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.zezzi.navigationcompose.R
@@ -26,16 +27,16 @@ fun Profile(navController: NavController = rememberNavController()) {
         AppBar(title = "Profile", navController = navController)
     }) {
         Column {
-            Button(onClick = { navController.navigate(route = NavigationState.Events.route) }) {
-                Text(text = "Test Navigation")
-            }
             Text(
                 text = "Profile Event",
                 style = MaterialTheme.typography.labelMedium,
                 modifier = Modifier
-                    .padding(start = dimensionResource(R.dimen.padding_small))
+                    .padding(start = 106.dp)
                     .fillMaxWidth()
             )
+            Button(onClick = { navController.navigate(route = NavigationState.Events.route) }) {
+                Text(text = "Start Events")
+            }
         }
     }
 }

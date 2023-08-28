@@ -62,7 +62,7 @@ fun EventGrid(modifier: Modifier = Modifier, navController: NavController) {
                     columns = GridCells.Fixed(2),
                     verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
                     horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
-                    modifier = modifier
+                    modifier = Modifier.padding(16.dp)
                 ) {
                     item(span = { GridItemSpan(maxLineSpan) }) {
                         Text(

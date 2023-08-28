@@ -27,8 +27,8 @@ fun Detail(navController: NavController) {
         AppBar(title = "Detail", navController = navController)
     }) {
         Column(modifier = Modifier.fillMaxWidth()
-            .padding(16.dp),
-            horizontalAlignment = Alignment.Start) {
+            .padding(106.dp),
+            horizontalAlignment = Alignment.End) {
             Column {
                 Text(
                     text = "Detail Event",
