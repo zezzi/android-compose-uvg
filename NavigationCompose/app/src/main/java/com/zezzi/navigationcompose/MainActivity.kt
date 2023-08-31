@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.zezzi.navigationcompose.navigation.Navigation
+import com.zezzi.navigationcompose.ui.TabNavigation
 import com.zezzi.navigationcompose.ui.theme.NavigationComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Navigation()
+                    //Navigation()
+                    TabNavigation()
                 }
             }
         }

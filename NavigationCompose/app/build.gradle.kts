@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.zezzi.navigationcompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.zezzi.navigationcompose"
         minSdk = 29
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -50,7 +50,11 @@ android {
 }
 
 dependencies {
+    implementation("androidx.compose.ui:ui-android:1.5.0")
     val nav_version = "2.5.3"
+    val accompanist_version = "0.32.0"
+    implementation("com.google.accompanist:accompanist-pager:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanist_version")
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("androidx.core:core-ktx:1.9.0")
