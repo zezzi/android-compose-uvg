@@ -1,4 +1,4 @@
-package com.zezzi.navigationcompose.ui
+package com.zezzi.navigationcompose.navigation
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.zezzi.navigationcompose.R
-import com.zezzi.navigationcompose.navigation.TabItem
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

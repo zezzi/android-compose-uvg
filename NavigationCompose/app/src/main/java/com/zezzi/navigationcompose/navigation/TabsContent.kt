@@ -1,4 +1,4 @@
-package com.zezzi.navigationcompose.ui
+package com.zezzi.navigationcompose.navigation
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.pager.PagerState
@@ -17,7 +17,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.pager.pagerTabIndicatorOffset
 import com.zezzi.navigationcompose.R
-import com.zezzi.navigationcompose.navigation.TabItem
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)

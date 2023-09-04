@@ -1,4 +1,4 @@
-package com.zezzi.navigationcompose.navigation
+package com.zezzi.eventzezziapp.navigation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
@@ -7,12 +7,12 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.zezzi.navigationcompose.R
-import com.zezzi.navigationcompose.ui.detail.view.Detail
-import com.zezzi.navigationcompose.ui.events.view.EventGrid
-import com.zezzi.navigationcompose.ui.profile.view.Profile
-import com.zezzi.navigationcompose.ui.recepies.view.MainScreen
-
+import com.zezzi.eventzezziapp.R
+import com.zezzi.eventzezziapp.ui.concerts.view.ConcertsView
+import com.zezzi.eventzezziapp.ui.detail.view.DetailView
+import com.zezzi.eventzezziapp.ui.favorites.view.FavoritesView
+import com.zezzi.eventzezziapp.ui.profile.view.ProfileView
+import com.zezzi.eventzezziapp.ui.venues.view.VenuesView
 
 @Composable
 fun Navigation(modifier: Modifier = Modifier) {
@@ -21,19 +21,19 @@ fun Navigation(modifier: Modifier = Modifier) {
         startDestination = NavigationState.Home.route,
         modifier = modifier) {
         composable(route = NavigationState.Home.route) {
-            EventGrid(
-                modifier = Modifier.padding(dimensionResource(R.dimen.padding_small)),
-                navController = navController
-            )
+            ConcertsView(navController = navController)
         }
         composable(route = NavigationState.Detail.route) {
-            Detail(navController = navController)
+            VenuesView(navController = navController)
         }
         composable(route = NavigationState.Events.route) {
-            MainScreen(navController = navController)
+            DetailView(navController = navController)
         }
         composable(route = NavigationState.Profile.route) {
-            Profile(navController = navController)
+            ProfileView(navController = navController)
+        }
+        composable(route = NavigationState.Profile.route) {
+            FavoritesView(navController = navController)
         }
     }
 }
