@@ -11,7 +11,6 @@ import com.zezzi.eventzezziapp.R
 import com.zezzi.eventzezziapp.ui.concerts.view.ConcertsView
 import com.zezzi.eventzezziapp.ui.detail.view.DetailView
 import com.zezzi.eventzezziapp.ui.favorites.view.FavoritesView
-import com.zezzi.eventzezziapp.ui.meals.view.MealsCategoriesScreen
 import com.zezzi.eventzezziapp.ui.profile.view.ProfileView
 import com.zezzi.eventzezziapp.ui.venues.view.VenuesView
 
@@ -22,7 +21,7 @@ fun Navigation(modifier: Modifier = Modifier) {
         startDestination = NavigationState.Home.route,
         modifier = modifier) {
         composable(route = NavigationState.Home.route) {
-            MealsCategoriesScreen()
+            ConcertsView(navController = navController)
         }
         composable(route = NavigationState.Detail.route) {
             VenuesView(navController = navController)
