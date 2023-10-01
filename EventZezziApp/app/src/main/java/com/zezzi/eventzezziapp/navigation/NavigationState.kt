@@ -1,9 +1,14 @@
 package com.zezzi.eventzezziapp.navigation
 
 sealed class NavigationState(val route: String) {
-    object Home: NavigationState("Home")
-    object Events: NavigationState("Event")
-    object Detail: NavigationState("Detail")
-    object Profile: NavigationState("Profile")
-    object Settings: NavigationState("Settings")
+
+    object MealsCategories: NavigationState("categories")
+    object MealsRecepiesList: NavigationState("categories/{category}")  {
+        fun createRoute(category: String) = "categories/$category"
+    }
+    object Home: NavigationState("home")
+    object Events: NavigationState("event")
+    object Detail: NavigationState("detail")
+    object Profile: NavigationState("profile")
+    object Settings: NavigationState("settings")
 }

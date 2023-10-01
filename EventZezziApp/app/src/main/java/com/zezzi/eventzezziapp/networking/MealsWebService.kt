@@ -18,7 +18,7 @@ class MealsWebService {
         api = retrofit.create(MealsApi::class.java)
     }
 
-    fun getMeals(): Call<MealsCategoriesResponse> {
-        return api.getMeals()
+    suspend fun getMealsCategories(): MealsCategoriesResponse {
+        return api.getMealsCategories()
     }
 }
