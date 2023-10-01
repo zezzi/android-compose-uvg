@@ -19,7 +19,7 @@ import com.zezzi.eventzezziapp.ui.venues.view.VenuesView
 fun Navigation(modifier: Modifier = Modifier) {
     val navController = rememberNavController()
     NavHost(navController = navController,
-        startDestination = NavigationState.Home.route,
+        startDestination = NavigationState.MealsCategories.route,
         modifier = modifier) {
         composable(route = NavigationState.MealsCategories.route) {
             MealsCategoriesScreen(navController = navController)
