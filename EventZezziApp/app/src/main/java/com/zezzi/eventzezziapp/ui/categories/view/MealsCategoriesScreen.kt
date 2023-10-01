@@ -78,7 +78,6 @@ fun MealCategory(meal: Categories) {
                     text = stringResource(R.string.category_name),
                     style = MaterialTheme.typography.h6
                 )
-                Divider()
                 Text(
                     text = meal.name,
                     style = MaterialTheme.typography.h6

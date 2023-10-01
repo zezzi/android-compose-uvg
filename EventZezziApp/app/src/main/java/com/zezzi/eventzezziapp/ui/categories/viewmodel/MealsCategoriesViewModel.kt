@@ -30,6 +30,6 @@ class MealsCategoriesViewModel (private val repository: MealsRepository = MealsR
     }
 
     private suspend fun getMealsCategories(): List<Categories> {
-        return repository.getMealsCategories().categories
+        return repository.getMealsCategories()
     }
 }
