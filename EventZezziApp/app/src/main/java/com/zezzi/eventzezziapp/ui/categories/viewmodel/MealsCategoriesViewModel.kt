@@ -3,18 +3,14 @@ package com.zezzi.eventzezziapp.ui.categories.viewmodel
 import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
-import androidx.compose.runtime.remember
 import androidx.lifecycle.viewModelScope
 import com.zezzi.eventzezziapp.networking.response.Categories
-import com.zezzi.eventzezziapp.ui.categories.repository.MealsRepository
-import kotlinx.coroutines.CoroutineScope
+import com.zezzi.eventzezziapp.ui.categories.repository.MealsCategoryRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class MealsCategoriesViewModel (private val repository: MealsRepository = MealsRepository()): ViewModel() {
+class MealsCategoriesViewModel (private val repository: MealsCategoryRepository = MealsCategoryRepository()): ViewModel() {
 
     val mealsState: MutableState<List<Categories>> =  mutableStateOf(emptyList<Categories>())
 

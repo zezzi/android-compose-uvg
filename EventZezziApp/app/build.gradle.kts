@@ -35,6 +35,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs += "-Xenable-coroutines"
     }
     buildFeatures {
         compose = true
@@ -71,6 +72,11 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
+    //Coroutines
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-alpha02")
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

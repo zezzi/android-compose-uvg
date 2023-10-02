@@ -8,10 +8,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.zezzi.eventzezziapp.R
+import com.zezzi.eventzezziapp.networking.response.Meal
 import com.zezzi.eventzezziapp.ui.categories.view.MealsCategoriesScreen
 import com.zezzi.eventzezziapp.ui.concerts.view.ConcertsView
 import com.zezzi.eventzezziapp.ui.detail.view.DetailView
 import com.zezzi.eventzezziapp.ui.favorites.view.FavoritesView
+import com.zezzi.eventzezziapp.ui.meals.view.MealsFilterScreen
 import com.zezzi.eventzezziapp.ui.profile.view.ProfileView
 import com.zezzi.eventzezziapp.ui.venues.view.VenuesView
 
@@ -23,6 +25,14 @@ fun Navigation(modifier: Modifier = Modifier) {
         modifier = modifier) {
         composable(route = NavigationState.MealsCategories.route) {
             MealsCategoriesScreen(navController = navController)
+        }
+        composable(NavigationState.MealsRecepiesList.route) {
+            MealsFilterScreen(navController = navController, category = "Beef")
+                //navBackStackEntry ->
+//            val mealCatagoryName = navBackStackEntry.arguments?.getString("category")
+//            mealCatagoryName?.let {
+//                MealsFilterScreen(navController = navController, category = mealCatagoryName)
+//            }
         }
         composable(route = NavigationState.Home.route) {
             ConcertsView(navController = navController)
