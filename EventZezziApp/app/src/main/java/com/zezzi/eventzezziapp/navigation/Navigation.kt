@@ -1,12 +1,15 @@
 package com.zezzi.eventzezziapp.navigation
 
+import android.util.Log
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.zezzi.eventzezziapp.R
 import com.zezzi.eventzezziapp.networking.response.Meal
 import com.zezzi.eventzezziapp.ui.categories.view.MealsCategoriesScreen
@@ -26,13 +29,14 @@ fun Navigation(modifier: Modifier = Modifier) {
         composable(route = NavigationState.MealsCategories.route) {
             MealsCategoriesScreen(navController = navController)
         }
-        composable(NavigationState.MealsRecepiesList.route) {
-            MealsFilterScreen(navController = navController, category = "Beef")
-                //navBackStackEntry ->
-//            val mealCatagoryName = navBackStackEntry.arguments?.getString("category")
-//            mealCatagoryName?.let {
-//                MealsFilterScreen(navController = navController, category = mealCatagoryName)
-//            }
+        composable(NavigationState.MealsRecepiesList.route,
+            arguments = listOf(navArgument("category") {
+                type = NavType.StringType
+            })) { backStackEntry ->
+            val arguments = requireNotNull(backStackEntry.arguments)
+            val categoryName = arguments.getString("category") ?: ""
+            Log.d("ARGUMENTNAV", categoryName)
+            MealsFilterScreen(navController = navController, category = categoryName)
         }
         composable(route = NavigationState.Home.route) {
             ConcertsView(navController = navController)

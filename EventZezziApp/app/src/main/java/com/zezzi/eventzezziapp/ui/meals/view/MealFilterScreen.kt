@@ -48,7 +48,7 @@ fun MealsFilterScreen(navController: NavController, category: String) {
     val mealFilter by viewModel.meals.observeAsState(null)
 
     LaunchedEffect(Unit) {
-        viewModel.fetchByCategory("Beef")
+        viewModel.fetchByCategory(category)
     }
 
     Scaffold(topBar = {

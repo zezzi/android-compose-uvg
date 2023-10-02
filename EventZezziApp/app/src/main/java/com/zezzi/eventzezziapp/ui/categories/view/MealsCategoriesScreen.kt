@@ -45,7 +45,7 @@ fun MealsCategoriesScreen(navController: NavController) {
     val meals = viewModel.mealsState.value
 
     Scaffold(topBar = {
-        AppBar(title = "Categories", navController = navController)
+        AppBar(title = "Recepies", navController = navController)
     }) {
         LazyColumn(contentPadding = PaddingValues(16.dp)) {
             items(meals) { meal ->
