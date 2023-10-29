@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "113765535529",
+    "project_id": "fir-demouvg",
+    "storage_bucket": "fir-demouvg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113765535529:android:3e04074717d835f3477138",
+        "android_client_info": {
+          "package_name": "com.zezzi.eventzezziapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113765535529-mips3hn5bg2m1ilhbmkjna4k8q8vavpq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zezzi.eventzezziapp",
+            "certificate_hash": "1515c069249f31d5a437381276c22b85a194247b"
+          }
+        },
+        {
+          "client_id": "113765535529-qg38ms5e9l9hic3n7fckd78cgghqfg7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWYZrV232mnmcQGHHU4_JI4yIoL-yHWxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113765535529-qg38ms5e9l9hic3n7fckd78cgghqfg7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,17 +1,13 @@
 package com.zezzi.eventzezziapp.navigation
 
 import android.util.Log
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.zezzi.eventzezziapp.R
-import com.zezzi.eventzezziapp.networking.response.Meal
 import com.zezzi.eventzezziapp.ui.categories.view.MealsCategoriesScreen
 import com.zezzi.eventzezziapp.ui.concerts.view.ConcertsView
 import com.zezzi.eventzezziapp.ui.detail.view.DetailView
